@@ -78,7 +78,7 @@ function draw() {
   drawScore();
   end();
   textSize(18);
-  text("Do you want to learn about net neutrality? Break the paywall.", 100,63);
+  text("Do you want to learn about net neutrality? Break the paywall to continue.", 100,63);
 
 
   paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
