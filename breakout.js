@@ -1,6 +1,5 @@
-//breakout close (core mechanics)
-//mouse to control the paddle, click to start
-
+//What can I improve about the interactivity of my explanation?
+//How can I improve the styling of the page?
 var paddle, ball, wallTop, wallBottom, wallLeft, wallRight;
 var brick;
 var bricksImage;
