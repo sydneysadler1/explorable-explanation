@@ -19,10 +19,13 @@ var bar1;
 
 
 function setup() {
-  createCanvas(800, 600);
+  cnv = createCanvas(800, 600);
+  cnv.position(0,0);
+  cnv.style('z-index','-1');
   bar1 = new ldBar("#myItem1");
   bar2 = document.getElementById('myItem1').ldBar;
   gif = loadGif('source.gif');
+
 
   //brickImage = loadImage("assets/dollar.png");
   //brick.addImage(brickImage);
