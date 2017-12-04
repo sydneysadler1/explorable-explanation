@@ -14,12 +14,15 @@ var COLUMNS = 16;
 var colors  = ["#4286f4", "#33cc54","#cc3333","#b233cc"];
 var score = 0;
 var myP;
+var bar1;
 
 
 
 function setup() {
   createCanvas(800, 600);
-
+  bar1 = new ldBar("#myItem1");
+  bar2 = document.getElementById('myItem1').ldBar;
+  gif = loadGif('source.gif');
 
   //brickImage = loadImage("assets/dollar.png");
   //brick.addImage(brickImage);
@@ -78,8 +81,8 @@ function draw() {
   drawScore();
   end();
   textSize(18);
-  text("Do you want to learn about net neutrality? Break the paywall to continue.", 100,63);
 
+  text("Do you want to learn about net neutrality? Break the paywall to load the explanation.", 65,63);
 
   paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
 
@@ -107,13 +110,16 @@ function mousePressed() {
 function brickHit(ball, brick) {
   brick.remove();
   score+=100;
+  bar1.set(score/144);
 }
 
 function end(){
+
   if(score == 14400)
   {
     textSize(20);
-    text("Congratulations! You have broken the paywall. You can now load the site.", 80,300);
+    text("Net Neutrality is the concept that all web traffic should be treated equally.", 100,400);
+    image(gif, 150, 80);
   }
 
 }

@@ -6,6 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
     <script src="p5.gui.js"></script>
+    <script src="p5.gif.js"></script>
+    <script src="p5.gif.min.js"></script>
     <script src="dat.gui.js"></script>
     <script src="breakout.js"></script>
     <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
@@ -16,11 +18,10 @@
     </style>
   </head>
   <body>
-    <div id="myItem1"></div>
-<script>
-  var bar1 = new ldBar("#myItem1");
-  var bar2 = document.getElementById('myItem1').ldBar;
-  bar1.set(60);
-</script>
+    <div id="myItem1"
+    data-preset="stripe"
+    style="width:100%;height:60px"
+    ></div>
+
   </body>
 </html>
