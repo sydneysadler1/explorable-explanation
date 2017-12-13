@@ -1,5 +1,19 @@
-//What can I improve about the interactivity of my explanation?
-//How can I improve the styling of the page?
+/*
+Title: Break the Paywall Net Neutrality Game
+Imagined, Designed, and Programmed by: Sydney Sadler
+Date: 12/12/17
+Description: This explorable explanation prompts the user to learn about net neutrality with an
+engaging modified version of the classic game Breakout.
+Sources of ideas and inspiration (title, author, URL):
+ * (Join the Fast Lane, BitTorrent, http://jointhefastlane.com/)
+ * (Removal of Net Neturality Simulator, Keep Our Net Free, https://chrome.google.com/webstore/detail/removal-of-net-neutrality/macmdnlopncdoehmjhfenfblflnohoen?hl=en-US)
+
+Includes code from (title, author, URL):
+ * (p5.play Breakout Example, molleindustria, http://p5play.molleindustria.org/examples/index.html?fileName=breakout.js)
+ * (Loading Bar.js, zbryikt, https://loading.io/progress/)
+ * (p5.gif, antiboredom, https://github.com/antiboredom/p5.gif.js/tree/master)
+
+*/
 var paddle, ball, wallTop, wallBottom, wallLeft, wallRight;
 var brick;
 var bricksImage;
@@ -38,7 +52,6 @@ function setup() {
   wallLeft.immovable = true;
   wallRight = createSprite(800+WALL_THICKNESS/2, 600/2, WALL_THICKNESS, 600);
   wallRight.immovable = true;
-
   bricks = new Group();
 
   var offsetX = 800/2-(COLUMNS-1)*(BRICK_MARGIN+BRICK_W)/2;
@@ -52,8 +65,6 @@ function setup() {
       brick.immovable = true;
     }
 
-  //the easiest way to avoid pesky multiple collision is to
-  //have the ball bigger than the bricks
   var img2 = loadImage("assets/wifi.png");
   ball = createSprite(800/2, 600-200, 11, 11);
   ball.maxSpeed = MAX_SPEED;
@@ -80,6 +91,7 @@ function draw() {
   ball.bounce(wallBottom);
   ball.bounce(wallLeft);
   ball.bounce(wallRight);
+
   if(ball.bounce(paddle))
   {
     var swing = (ball.position.x-paddle.position.x)/3;
