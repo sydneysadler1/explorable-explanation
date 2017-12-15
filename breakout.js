@@ -171,7 +171,7 @@ function end(){
     text("Petitions such as Battle for the Net gained 2.5 million signatures and was backed by", 30,400);
     text("tech companies like Google, Facebook, Netflix, Amazon, and Reddit.",100,425);
   }
-  if (score > 12500 && score <= 14400)
+  if (score > 12500 && score < 14400)
   {
     textSize(20);
     text("Regardless, the FCC is still reversing net neutrality despite ",140,400);
